@@ -25,6 +25,7 @@ img {
 	position: sticky;
 	top: 0;
 	height: 100vh;
+	overflow-x: hidden;
 }
 
 .graphic-item{
@@ -41,6 +42,7 @@ img {
 
 	opacity: 0;
 	transition: 0.5s;
+	will-change: opacity; /* 바뀌게 될 속성을 미리 말해줌.. 브라우저한테.. 근데 너무 이 속성을 너무 많이쓰면 효율이 더 떨어질수가있음 */
 }
 
 .visible{
@@ -62,4 +64,27 @@ img {
 
 .scene-img{
 	max-height: 100vh;
+}
+
+.bird{
+	position: absolute;
+	left: 0;
+	bottom: 70%;
+	width: 100px;
+	transform: translateX(-100%);
+	transition: 1.5s 0.5s linear; /* transition:재생시간 지연시간 함수 */
+}
+
+[data-index="5"] .bird{
+	left: 30%;
+	bottom: 30%;
+}
+
+.global-footer{
+	padding: 2em 0;
+	text-align: center;
+}
+
+.strikethrough{
+	text-decoration: line-through;
 }
